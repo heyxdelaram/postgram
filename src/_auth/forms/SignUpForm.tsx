@@ -30,7 +30,7 @@ const SignUpForm = () => {
     },
   });
 
-  // 2. Define a submit handler.
+  // 2. Define a submit handler: adding users to appwrite
   async function onSubmit(values: z.infer<typeof signUpValidation>) {
     const newUser = await createUserAccount(values);
     console.log(newUser);
